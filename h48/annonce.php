@@ -26,7 +26,7 @@ if (!empty($_POST)) {
         $image = $_FILES['image']['name'];
       
         // image file directory
-        $target = "../images/".basename($image);
+        $target = "Challenge-48h/h48/images/".basename($image);
 
         if (move_uploaded_file($_FILES['image']['tmp_name'], $target)) {
           $msg = "Image uploaded successfully";
