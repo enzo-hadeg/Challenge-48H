@@ -39,8 +39,15 @@ $pdo = new PDO("mysql:host=localhost;dbname=challenge 48h", "root", "", array(PD
 if (!empty($_POST)) {
 
     $_POST["titre"] = htmlentities($_POST["titre"], ENT_QUOTES); 
-    $_POST["prix"] = htmlentities($_POST["prix"], ENT_QUOTES);
     $_POST["description"] = htmlentities($_POST["description"], ENT_QUOTES);
+    $_POST["instantcons"] = htmlentities($_POST["instantcons"], ENT_QUOTES);
+    $_POST["ciblecli"] = htmlentities($_POST["ciblecli"], ENT_QUOTES);
+    $_POST["ambiance"] = htmlentities($_POST["ambiance"], ENT_QUOTES);
+    $_POST["familleprod"] = htmlentities($_POST["familleprod"], ENT_QUOTES);
+    $_POST["comprepa"] = htmlentities($_POST["comprepa"], ENT_QUOTES);
+    $_POST["preciprod"] = htmlentities($_POST["preciprod"], ENT_QUOTES);
+    $_POST["vue"] = htmlentities($_POST["vue"], ENT_QUOTES);
+    $_POST["region"] = htmlentities($_POST["region"], ENT_QUOTES);
     $_POST["date"] = htmlentities($_POST["date"], ENT_QUOTES);
     $_POST["statut"] = htmlentities($_POST["statut"], ENT_QUOTES);
     
@@ -60,7 +67,7 @@ if (!empty($_POST)) {
           $msg = "Failed to upload image";
         }
       }
-    $requeteSQL = "INSERT INTO objet_annonce (titre, prix, description, date, statut, image) VALUES ('$_POST[titre]', '$_POST[prix]', '$_POST[description]', '$_POST[date]', '$_POST[statut]', '$image')"; 
+    $requeteSQL = "INSERT INTO objet_annonce (titre, prix, description, date, statut, image) VALUES ('$_POST[titre]', '$_POST[prix]', '$_POST[description]','$_POST[instantcons]','$_POST[ciblecli]','$_POST[ambiance]','$_POST[familleprod]','$_POST[comprepa]', '$_POST[date]','$_POST[preciprod]','$_POST[vue]','$_POST[region]', '$_POST[statut]', '$image')"; 
     $result = $pdo->exec($requeteSQL); 
   }
 ?>
@@ -77,13 +84,40 @@ if (!empty($_POST)) {
         </div>
 
         <div class="form-group">
-            <label for="prix">prix</label>
-            <input type="text" class="form-control" id="prix" name="prix">
-        </div>
-
-        <div class="form-group">
             <label for="description">Description</label>
             <textarea rows="10" class="form-control" id="description" name="description"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="prix">Instant de consomation </label>
+            <input type="text" class="form-control" id="instantcons" name="Instant de consomation">
+        </div>
+        <div class="form-group">
+            <label for="prix">Cibles Clients </label>
+            <input type="text" class="form-control" id="ciblecli" name="Cibles Clients">
+        </div>
+        <div class="form-group">
+            <label for="prix">Ambiance / univers exprimés </label>
+            <input type="text" class="form-control" id="ambiance" name="Ambiance / univers exprimés">
+        </div>
+        <div class="form-group">
+            <label for="prix">Familles de produit </label>
+            <input type="text" class="form-control" id="familleprod" name="Familles de produit">
+        </div>
+        <div class="form-group">
+            <label for="prix">Composante du repas </label>
+            <input type="text" class="form-control" id="comprepa" name="Composante du repas">
+        </div>
+        <div class="form-group">
+            <label for="prix">Précisions sur le produit </label>
+            <input type="text" class="form-control" id="preciprod" name="Précisions sur le produit">
+        </div>
+        <div class="form-group">
+            <label for="prix">Prise de vue </label>
+            <input type="text" class="form-control" id="vue" name="Prise de vue">
+        </div>
+        <div class="form-group">
+            <label for="prix">Région </label>
+            <input type="text" class="form-control" id="region" name="Région">
         </div>
 
         <div class="form-group">

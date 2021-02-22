@@ -3,12 +3,7 @@
   <div class="container-fluid p-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
       <img src="img/header.jpg" class="images_LBC">
-        <h1 class="mb-0">PASSION FROID
-          <span class="text-primary">Groupe Pomona</span>
-        </h1>
-      </div>
     </section>
 
     <hr class="m-0">
@@ -31,7 +26,7 @@ $conn = mysqli_connect($db_server,$db_user_login, $db_user_pass, $db_name);
 
 <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
       <div class="w-100">
-        <h2 class="mb-5">Mes Annonces</h2>
+        <h2 class="mb-5">PRODUIT</h2>
 
 <?php
  // affichage du résultat
