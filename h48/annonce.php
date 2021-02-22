@@ -1,37 +1,4 @@
-<?php include("inc/header.inc.php"); ?>
-
-<?php 
-
-$db = new PDO('mysql:host=localhost;dbname=challenge 48h', 'root','');
-
-
-
-?>
-
-<body id="page-top">
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="../index2.php">Menu</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="annonce.php">Mes Annonces</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="profile.php">Mon Profil</a>
-        </li>
-        </li>
-        </li>
-  </form>
-</nav>
-      </ul>
-    </div>
-  </nav>
-  <?php 
-
-
-
+<?php include("inc/header.inc.php"); 
 $pdo = new PDO("mysql:host=localhost;dbname=challenge 48h", "root", "", array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
 
 
@@ -67,7 +34,7 @@ if (!empty($_POST)) {
           $msg = "Failed to upload image";
         }
       }
-    $requeteSQL = "INSERT INTO objet_annonce (titre, prix, description, date, statut, image) VALUES ('$_POST[titre]', '$_POST[prix]', '$_POST[description]','$_POST[instantcons]','$_POST[ciblecli]','$_POST[ambiance]','$_POST[familleprod]','$_POST[comprepa]', '$_POST[date]','$_POST[preciprod]','$_POST[vue]','$_POST[region]', '$_POST[statut]', '$image')"; 
+    $requeteSQL = "INSERT INTO objet_annonce (titre, description,instantcons ,ciblecli ,ambiance ,familleprod ,comprepa ,preciprod ,vue , region , date, statut, image) VALUES ('$_POST[titre]', '$_POST[description]','$_POST[instantcons]','$_POST[ciblecli]','$_POST[ambiance]','$_POST[familleprod]','$_POST[comprepa]', '$_POST[date]','$_POST[preciprod]','$_POST[vue]','$_POST[region]', '$_POST[statut]', '$image')"; 
     $result = $pdo->exec($requeteSQL); 
   }
 ?>
@@ -138,6 +105,3 @@ if (!empty($_POST)) {
     </form>
 </div>
 
-<br><br>
-
-<a href="../index2.php#experience" class="btn btn-primary">Accueil</a>
