@@ -56,35 +56,35 @@ if (!empty($_POST)) {
         </div>
         <div class="form-group">
             <label for="prix">Instant de consomation </label>
-            <input type="text" class="form-control" id="instantcons" name="Instant de consomation">
+            <input type="text" class="form-control" id="instantcons" name="instantcons">
         </div>
         <div class="form-group">
             <label for="prix">Cibles Clients </label>
-            <input type="text" class="form-control" id="ciblecli" name="Cibles Clients">
+            <input type="text" class="form-control" id="ciblecli" name="ciblecli">
         </div>
         <div class="form-group">
             <label for="prix">Ambiance / univers exprimés </label>
-            <input type="text" class="form-control" id="ambiance" name="Ambiance / univers exprimés">
+            <input type="text" class="form-control" id="ambiance" name="ambiance">
         </div>
         <div class="form-group">
             <label for="prix">Familles de produit </label>
-            <input type="text" class="form-control" id="familleprod" name="Familles de produit">
+            <input type="text" class="form-control" id="familleprod" name="familleprod">
         </div>
         <div class="form-group">
             <label for="prix">Composante du repas </label>
-            <input type="text" class="form-control" id="comprepa" name="Composante du repas">
+            <input type="text" class="form-control" id="comprepa" name="comprepa">
         </div>
         <div class="form-group">
             <label for="prix">Précisions sur le produit </label>
-            <input type="text" class="form-control" id="preciprod" name="Précisions sur le produit">
+            <input type="text" class="form-control" id="preciprod" name="preciprod">
         </div>
         <div class="form-group">
             <label for="prix">Prise de vue </label>
-            <input type="text" class="form-control" id="vue" name="Prise de vue">
+            <input type="text" class="form-control" id="vue" name="vue">
         </div>
         <div class="form-group">
             <label for="prix">Région </label>
-            <input type="text" class="form-control" id="region" name="Région">
+            <input type="text" class="form-control" id="region" name="region">
         </div>
 
         <div class="form-group">
